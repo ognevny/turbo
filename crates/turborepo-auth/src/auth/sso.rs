@@ -78,6 +78,7 @@ pub async fn sso_login<T: Client + TokenClient + CacheClient>(
                         api_client,
                         sso_team,
                         Some(valid_token_callback(
+                            #[allow(clippy::literal_string_with_formatting_args)]
                             "Existing Vercel token for {sso_team} found!",
                             color_config,
                         )),
